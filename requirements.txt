@@ -1,0 +1,12 @@
+pre_commit==3.7.1
+SQLAlchemy==2.0.31
+virtualenv==20.26.3
+ipykernel
+fastapi[standard]
+
+
+#python-jose
+#mlrose
+#tqdm
+#seaborn
+#plotly
