@@ -1,19 +1,13 @@
-# fast_invest
+# Como rodar o projeto
 
-# Criando ambiente de desenvolvimento (Inicio do projeto)
-    - Seguir esse tutorial: https://fastapidozero.dunossauro.com/01/
+# 1- Passo: Realiza as instalações de dependencias 
+- linux(ubuntu)
+    . install.sh
+- Windows
+    install.bat
 
+# 2- Passo: Ajuste no banco de dados
+alembic upgrade head
 
-
-# Rodar aplicação em toda a rede
+# 3- Passo: rodar aplicação 
 task run --host 0.0.0.0
-
-# Add no gitignore
-echo 'database.db' >> .gitignore
-
-# Alembic
-- config.set_main_option('sqlalchemy.url', Settings().DATABASE_URL)
-- alembic upgrade head
-
-# Rodar
-fastapi dev fast_invest/app.py
