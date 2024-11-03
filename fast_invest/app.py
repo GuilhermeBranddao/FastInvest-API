@@ -2,15 +2,13 @@ from http import HTTPStatus
 
 from fastapi import FastAPI
 
-from fast_invest.schemas import Message
-
 from fast_invest.routers import auth, users
+from fast_invest.schemas import Message
 
 app = FastAPI()
 
 app.include_router(auth.router)
 app.include_router(users.router)
-
 
 
 @app.get('/', status_code=HTTPStatus.OK, response_model=Message)
